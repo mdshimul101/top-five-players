@@ -90,27 +90,28 @@
                             <br>
                             <div>
                                 <span class="mr-6">Per Player</span>
-                                <input class="w-36 p-1 text-black" type="text" name="" id="">
+                                <input class="w-36 p-1 text-black" type="text" name="" id="player-cost">
                             </div>
 
-                            <button class="bg-slate-600 w-60 mt-6 p-2">Calculate</button>
+                            <button id="player-total-cost-btn" class="bg-slate-600 w-60 mt-6 p-2">Calculate</button>
                             <div class="mt-6">
-                                <span class="float-left ml-4">Player Expenses</span> <span class="ml-4">5000</span>
+                                <span class="float-left ml-4">Player Expenses</span>$<span class="ml-4"
+                                    id="set-player-cost">00</span>
                             </div>
                             <div class="mt-4">
                                 <span class="mr-6">Manager</span>
-                                <input class="w-36 p-1 text-black" type="text" name="" id="">
+                                <input class="w-36 p-1 text-black" type="text" name="" id="manager-cost">
                             </div>
                             <div class="mt-4">
                                 <span class="mr-10">Coach </span>
-                                <input class="w-36 p-1 text-black" type="text" name="" id="">
+                                <input class="w-36 p-1 text-black" type="text" name="" id="coach-cost">
                             </div>
 
-                            <button class="bg-slate-600 w-60 mt-6 p-2">Calculate Total</button>
+                            <button id="total-cost-btn" class="bg-slate-600 w-60 mt-6 p-2">Calculate Total</button>
 
                             <div class="mt-4 mb-20">
                                 <span class="float-left ml-4">Total</span>
-                                <span class="float-right mr-4">$<span>000000</span></span>
+                                <span class="float-right mr-4">$<span id="set-total-cost" class="ml-4">00</span></span>
                             </div>
 
                         </div>
@@ -124,6 +125,7 @@
 
 
     <script src="Js/player-list.js"></script>
+    <script src="Js/budget.js"></script>
 
 </body>
 

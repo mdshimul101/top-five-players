@@ -28,8 +28,13 @@ function buttonDisible(buttonId) {
 
 const playerArray = [];
 
-function setPlayer(playerId, selectButton) {
+function numberOfPlayer() {
+    const playerNumber = playerArray.length;
+    return playerNumber;
+}
 
+// set player
+function setPlayer(playerId, selectButton) {
 
     const playerName = document.getElementById(playerId).innerText;
 
@@ -37,8 +42,10 @@ function setPlayer(playerId, selectButton) {
     const totalPlayer = playerArray.length;
     if (totalPlayer > 5) {
         alert("You could not add player");
+        playerArray.pop();
         return;
     }
+
     const tableBody = document.getElementById('players');
     tableBody.innerHTML = "";
     for (let i = 0; i < totalPlayer; i++) {
