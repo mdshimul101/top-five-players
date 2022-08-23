@@ -17,14 +17,12 @@ document.getElementById('total-cost-btn').addEventListener('click', function () 
     const perPlayerCost = getValueById('player-cost');
     const playerCost = totalPlayerCost(perPlayerCost);
 
-
     const managerCost = getValueById('manager-cost');
     const coachCost = getValueById('coach-cost');
     if (isNaN(perPlayerCost) || isNaN(managerCost) || isNaN(coachCost)) {
         alert("Add cost");
         return;
     }
-
     const totalCost = playerCost + managerCost + coachCost;
 
     setTextElementValueById('set-total-cost', totalCost);
@@ -37,6 +35,6 @@ clearInputField('coach-cost');
 
 //clear input field
 function clearInputField(elementId) {
-    const inputField = document.getElementById(elementId).value = '';
+    document.getElementById(elementId).value = '';
 }
 

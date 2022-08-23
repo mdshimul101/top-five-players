@@ -53,6 +53,5 @@ function setPlayer(playerId, listId, selectButton) {
     document.getElementById(listId).appendChild(li);
     document.getElementById('total-player').innerText = totalPlayer;
 
-
 }
 
