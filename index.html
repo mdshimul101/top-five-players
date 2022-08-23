@@ -9,7 +9,7 @@
     <!-- taildind css  -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- google-font -->
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Roboto:wght@100;300;400&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
@@ -17,16 +17,22 @@
 </head>
 
 <body>
-    <header class="bg-slate-800">
-        <h1 class="text-center text-5xl text-white p-10">Top Five Player</h1>
+    <!-- header section -->
+    <header class="bg-slate-800 h-64 bg-cover bg-center   bg-[url('images/background_img_1.jpg')]">
+        <h1 class="text-center text-5xl text-white pt-12" style="font-family: 'Berkshire Swash';">Top Five Player</h1>
+        <p class="text-center  text-white p-4">You can choose top five player from the following player list to
+            play for your club.</p>
+
     </header>
+    <!-- main section -->
     <main>
         <section class="mt-20 mb-20">
-            <div class="w-10/12 mx-auto flex">
-                <div class="w-9/12">
-                    <div class="grid grid-cols-3 gap-6 ">
+            <div
+                class="w-100 xl:w-10/12 lg:w-10/12 md:w-10/12 mx-auto flex-col xl:flex lg:flex md:flex-row sm:flex-col">
+                <div class="w-9/12 mx-auto mb-">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 ">
                         <div class="bg-white border border-black h-72">
-                            <img class="h-44 w-80" src="images/messi.jpg" alt="...">
+                            <img class="h-44 w-100" src="images/messi.jpg" alt="...">
                             <div class="text-center">
                                 <h4 id="player-1-name" class="text-xl font-semibold mt-1">Leo Messi</h4>
                                 <button id="player-1-btn" class="m-5 bg-slate-800 px-14 py-2 text-white">Select</button>
@@ -69,22 +75,45 @@
                         </div>
 
 
+
+                        <div class="bg-white border border-black h-72">
+                            <img class="h-44 w-80" src="images/mauro_lcardi.jpg" alt="...">
+                            <div class="text-center">
+                                <h4 id="player-7-name" class="text-xl font-semibold mt-1">Mauro Lcardi</h4>
+                                <button id="player-7-btn" class="m-5 bg-slate-800 px-14 py-2 text-white">Select</button>
+                            </div>
+                        </div>
+                        <div class="bg-white border border-black h-72">
+                            <img class="h-44 w-80" src="images/vitinha.jpg" alt="...">
+                            <div class="text-center">
+                                <h4 id="player-8-name" class="text-xl font-semibold mt-1">Vitinha</h4>
+                                <button id="player-8-btn" class="m-5 bg-slate-800 px-14 py-2 text-white">Select</button>
+                            </div>
+                        </div>
+                        <div class="bg-white border border-black h-72">
+                            <img class="h-44 w-80" src="images/marco-verratti.jpg" alt="...">
+                            <div class="text-center">
+                                <h4 id="player-9-name" class="text-xl font-semibold mt-1">Marco Verratti</h4>
+                                <button id="player-9-btn" class="m-5 bg-slate-800 px-14 py-2 text-white">Select</button>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
 
-                <div>
-                    <div class="ml-6">
-                        <div class="bg-slate-800 p-6  w-80 text-white">
+                <div class="w-50 ">
+                    <div class="mx-auto w-9/12 xl:ml-6 lg:ml-6">
+                        <div class="bg-slate-800 p-6  xl:w-80 lg:w-80 md:w-80 text-white">
                             <h3 class="text-3xl font-bold text-center mb-6">Selected - <span id="total-player">0</span>
                             </h3>
                             <hr>
-                            <table class="mt-4">
-                                <tbody id="players" class="font-semibold text-white">
 
-                                </tbody>
-                            </table>
+                            <ol id="player-list" class="list-decimal ml-4 mt-4">
+
+                            </ol>
                         </div>
-                        <div class="bg-slate-800 p-6 w-80 mt-6 text-white text-center">
+                        <div class="bg-slate-800 p-6 xl:w-80 lg:w-80 md:w-80 mt-6 text-white text-center">
                             <h3 class="text-3xl font-bold text-center">Budget</h3>
                             <br>
                             <br>
@@ -108,7 +137,7 @@
                             </div>
 
                             <button id="total-cost-btn" class="bg-slate-600 w-60 mt-6 p-2">Calculate Total</button>
-
+                            <hr class="mt-4">
                             <div class="mt-4 mb-20">
                                 <span class="float-left ml-4">Total</span>
                                 <span class="float-right mr-4">$<span id="set-total-cost" class="ml-4">00</span></span>
@@ -126,6 +155,7 @@
 
     <script src="Js/player-list.js"></script>
     <script src="Js/budget.js"></script>
+    <script src="Js/utilities.js"></script>
 
 </body>
 
